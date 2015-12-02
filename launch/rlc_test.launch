@@ -1,0 +1,20 @@
+<launch>
+
+	<node name="baxter_enable" pkg="baxter_tools" type="baxter_enable" args="enable_robot.py -e" />
+	<node name="baxter_server" pkg="baxter_interface" type="baxter_server" args="joint_trajectory_action_server.py" />
+	
+	<node name="demo_baxter" pkg="baxter_moveit_config" type="moveit_node">
+	</node>
+
+	<node name="baxter_grasps" pkg="agile_grasp" type="selection_node" output="screen">
+  	<param name="cloud_topic" value="/register_clouds/point_cloud" />
+	</node>
+
+	<node name="select_grasps" pkg="grasp_selection" type="selection_node" output="screen">
+  	<param name="cloud_topic" value="/register_clouds/point_cloud" />
+	</node>
+
+	<node name="moveit_grasping" pkg="grasp_selection" type="moveit_grasping" args="moveit_grasping.py"/>
+	</node>
+
+</launch>

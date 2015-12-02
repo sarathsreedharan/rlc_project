@@ -1,0 +1,14 @@
+<package>
+  <description brief="rlc_project">
+
+     rlc_project
+
+  </description>
+  <author>yochan</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rlc_project</url>
+
+</package>
+
+
