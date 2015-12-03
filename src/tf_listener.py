@@ -4,6 +4,13 @@ import rospy
 import tf
 import sys
 import time
+import signal
+
+def handle_exit(recvd_signal, frame):
+    """
+    """
+    print "recieved a sigterm, exiting the process"
+    
 FAILURE_THRESHOLD = 10
 
 def record_my_position(trans, quat, rec_filename):
@@ -14,6 +21,7 @@ def record_my_position(trans, quat, rec_filename):
         rec_fd.write(rec_line + '\n')
 
 if __name__ == "__main__":
+    signal.signal(signal.SIGTERM, handle_exit)
     base_node = "/" + sys.argv[1].strip()
     marker_node = "/" + sys.argv[2].strip()
     rec_filename = sys.argv[3].strip()
