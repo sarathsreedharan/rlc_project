@@ -13,10 +13,20 @@ import rospy
 import numpy as np
 from dmp.srv import *
 from dmp.msg import *
+import tf
+import time
+import moveit_commander
+import moveit_msgs.msg
+import geometry_msgs.msg
+import copy
+import StringIO
+import baxter_interface
+import baxter_external_devices
 
-LATERAL_RECORD_FILE = ""
-VERTICAL_RECORD_FILE = ""
-RETURN_RECORD_FILE = ""
+
+LATERAL_RECORD_FILE = "record_files_test/record_file_new_lat"
+VERTICAL_RECORD_FILE = "record_files_test/record_file_new_ver"
+RETURN_RECORD_FILE = "record_files_test/record_file_new_return"
 
 # A BUNCH OF CONSTANTS
 ## TODO: Should I move it to a config file
@@ -28,9 +38,9 @@ POUR_GRIP = [0.374, 0.625, 0.602, 0.328]
 # marker gripper deltas
 LATERAL_GRASP_DELTA = [-0.026, -0.1, 0.048]
 VERTICAL_GRASP_DELTA = [-0.002, -0.060, 0.121]
-DROP_MAGIC_NUMBERS = [-0.029, -0.087, 0.238]
-POUR_MAGIC_NUMBERS = [0.029, -0.163, 0.228]
-
+DROP_GRASP_DELTA = [-0.029, -0.087, 0.238]
+POUR_GRASP_DELTA = [0.029, -0.163, 0.228]
+PLACE_GRASP_DELTA = [0, 0, 0.238]
 
 
 class DmpLibrary(object):
@@ -318,9 +328,9 @@ class DmpLibrary(object):
             tmp_pose.orientation.y = step[4]
             tmp_pose.orientation.z = step[5]
             tmp_pose.orientation.w = step[6]
-            tmp_pose.position.x = step[0] + grasp_delta[0]
-            tmp_pose.position.y = step[1] + grasp_delta[1]
-            tmp_pose.position.z = step[2] + grasp_delta[2]
+            tmp_pose.position.x = step[0]
+            tmp_pose.position.y = step[1]
+            tmp_pose.position.z = step[2]
             waypoints.append(copy.deepcopy(tmp_pose))
 
         (move_plan, fraction) = group.compute_cartesian_path(
@@ -336,3 +346,72 @@ class DmpLibrary(object):
 
         group._g.execute(output.getvalue())
         return True
+
+    def place(self, src_marker, destination_marker):
+        """
+            Execute the place dmp 
+        """
+        traj = []
+
+        with open(self.vertical_record_file) as tr_fd:
+            trace_index = 0
+            for line in tr_fd:
+                traj.append([float(i) for i in line.strip().split(',')])
+        try:
+            curr_initial_pos, curr_initial_orient = listener.lookupTransform('/base', src_marker, rospy.Time(0))
+        except:
+            time.sleep(1)
+            curr_initial_pos, curr_initial_orient = listener.lookupTransform('/base', src_marker, rospy.Time(0))
+
+        curr_init = list(initial_pos) + list (initial_orient)
+
+        try:
+            goal_pos, goal_orient = listener.lookupTransform('/base', destination_marker, rospy.Time(0))         #Plan to a different goal than demo
+        except:
+            time.sleep(1)
+            goal_pos, goal_orient = listener.lookupTransform('/base', destination_marker, rospy.Time(0))
+
+        goal = list(goal_pos) + grasp_orientation
+
+        #resp = makeLFDRequest(self.dims, self.traj, self.dt, self.K, self.D, self.num_bases)
+        #Set it as the active DMP
+        #makeSetActiveRequest(resp.dmp_list)
+        plan = getDMPplan(curr_init, traj, goal)
+        waypoints = []
+        for point in plan.plan.points:
+            tmp_pose = geometry_msgs.msg.Pose()
+            step = list(point.positions)
+            tmp_pose.orientation.x = step[3]
+            tmp_pose.orientation.y = step[4]
+            tmp_pose.orientation.z = step[5]
+            tmp_pose.orientation.w = step[6]
+            tmp_pose.position.x = step[0] + PLACE_GRASP_DELTA[0]
+            tmp_pose.position.y = step[1] + PLACE_GRASP_DELTA[1]
+            tmp_pose.position.z = step[2] + PLACE_GRASP_DELTA[2]
+            waypoints.append(copy.deepcopy(tmp_pose))
+
+        (move_plan, fraction) = group.compute_cartesian_path(
+                                 waypoints,   # waypoints to follow
+                                 0.01,        # eef_step
+                                 0.0)         # jump_threshold
+
+        if fraction < 0.8:
+            print "Not enough waypoints executed"
+            return False
+        output = StringIO.StringIO()
+        move_plan.serialize(output)
+
+        time.sleep(1)
+        self.right_gripper.open([])
+        time.sleep(3)
+
+
+        group._g.execute(output.getvalue())
+
+        #    1.c close grip
+        # Baxter I command thee to close thy gripper
+        time.sleep(3)
+        self.right_gripper.close([])
+        time.sleep(2)
+        return True
+        
