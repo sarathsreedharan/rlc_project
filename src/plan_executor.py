@@ -3,11 +3,12 @@ import sys, os
 import subprocess
 import time
 
-marker_map = {'cup': 'ar_marker_8', 'ice_cube': 'ar_marker_10', 'init':'right_gripper','default_region':'ar_marker_9'}
+# Move these to a yaml file
+marker_map = {'cup': 'ar_marker_8', 'ice_cube': 'ar_marker_10', 'init':'right_gripper', 'default':'ar_marker_9'}
 baxter_emotion_map = {"happy":"happy.png", "sad": "sad.png", "quizzical":"quizzical.png"}
-indiv_dmp_map = {'Place':"place", "Pickup":"vertical_grasp", "Return": "return_dmp"}
-src_dest_map = {}
-multi_dmp_actions = []
+indiv_dmp_map = {"MoveAndPlace": "place", "Return": "return_dmp", "Drop": "drop", "Pour": "pour" }
+src_dest_map = {"MoveAndGrasp":[2,1], "MoveAndPlace"}
+multi_dmp_actions = {"MoveAndGrasp":["vertical_grasp", "lateral_grasp"]}
 def baxter_emote(emotion):
     current_dir = os.path.dirname(os.path.realpath(__file__))
     image_dir = os.path.join(current_dir, '../images/')
@@ -26,14 +27,20 @@ def traslate_obj_to_markers(obj1, obj2):
         marker_1 = marker_map[obj1]
     if obj2 != "" and obj2 in marker_map.keys():
         marker_2 = marker_map[obj2]
-    return marker_1, marker_2
+    return (marker_1, marker_2)
 
 def convert_action_to_dmp(action, relevant_plan = []):
     dmp_name = ""
-    if action not in multi_dmp_actions:
+    if action not in multi_dmp_actions.keys():
         if action in indiv_dmp_map.keys():
             dmp_name = indiv_dmp_map[action]
     return dmp_name
+
+def get_src_and_dest(action_list):
+    if action_list[0] not in src_dest_map.keys():
+        return ("", "")
+    src_id, dst_id =  src_dest_map[action_list[0]]
+    return traslate_obj_to_markers(action_list[src_id], action_list[dst_id])
 
 if __name__ == "__main__":
     rospy.init_node('baxter_planner')
