@@ -1,0 +1,12 @@
+moveandgrasp cup a a
+return a init
+pour water cup mug init
+moveandplace cup init c
+return c init
+moveandgrasp icecube a b
+return b init
+moveandplace icecube init a
+return a init
+moveandgrasp cup a c
+return c init
+moveandplace cup init b

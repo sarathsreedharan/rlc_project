@@ -1,0 +1,11 @@
+moveandgrasp cup a g
+return g init
+moveandplace cup init b
+return b init
+moveandgrasp icecube a a
+return a init
+moveandplace icecube init g
+return g init
+moveandgrasp cup a b
+return b init
+moveandplace cup init a

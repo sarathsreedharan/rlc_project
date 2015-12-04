@@ -1,0 +1,3 @@
+moveandgrasp cup a g
+return g init
+moveandplace cup init e

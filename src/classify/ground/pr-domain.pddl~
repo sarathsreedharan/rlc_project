@@ -1,0 +1,10180 @@
+(define
+	(domain grounded-BAXTER)
+	(:requirements :strips :action-costs)
+	(:predicates
+		( HOLDING_MUG )
+		( FREE_INIT )
+		( IN_MUG_MUG )
+		( HANDAT_A )
+		( HANDAT_B )
+		( HANDAT_C )
+		( HANDAT_D )
+		( HANDAT_E )
+		( HANDAT_F )
+		( HANDAT_G )
+		( HANDAT_H )
+		( HANDAT_I )
+		( HANDAT_J )
+		( HANDAT_K )
+		( HANDAT_L )
+		( HANDAT_M )
+		( HANDAT_N )
+		( HANDAT_O )
+		( HANDAT_P )
+		( HANDAT_Q )
+		( HANDAT_R )
+		( HANDAT_S )
+		( HANDAT_T )
+		( HANDAT_U )
+		( HANDAT_V )
+		( HANDAT_W )
+		( HANDAT_X )
+		( HANDAT_Y )
+		( HANDAT_Z )
+		( HANDAT_INIT )
+		( HANDSFREE )
+		( AT_MUG_INIT )
+		( EXPLAINED_FULL_OBS_SEQUENCE )
+		( NOT_EXPLAINED_FULL_OBS_SEQUENCE )
+	) 
+	(:functions (total-cost))
+	(:action MOVEANDPLACE_MUG_Z_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_Z )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_Y_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_Y )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_X_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_X )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_W_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_W )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_V_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_V )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_U_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_U )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_T_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_T )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_S_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_S )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_R_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_R )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_Q_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_Q )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_P_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_P )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_O_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_O )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_N_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_N )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_M_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_M )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_L_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_L )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_K_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_K )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_J_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_J )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_I_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_I )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_H_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_H )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_G_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_G )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_F_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_F )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_E_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_E )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_D_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_D )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_C_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_C )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_B_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_B )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_A_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( HANDAT_A )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_Z_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Z_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Z )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action RETURN_Y_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_Y_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Y )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action RETURN_X_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_X_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_X )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action RETURN_W_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_W_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_W )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action RETURN_V_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_V_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_V )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action RETURN_U_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_U_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_U )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action RETURN_T_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_T_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_T )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action RETURN_S_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_S_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_S )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action RETURN_R_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_R_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_R )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action RETURN_Q_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_Q_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_Q )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action RETURN_P_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_P_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_P )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action RETURN_O_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_O_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_O )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action RETURN_N_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_N_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_N )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action RETURN_M_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_M_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_M )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action RETURN_L_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_L_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_L )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action RETURN_K_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_K_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_K )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action RETURN_J_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_J_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_J )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action RETURN_I_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_I_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_I )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action RETURN_H_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_H_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_H )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action RETURN_G_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_G_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_G )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action RETURN_F_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_F_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_F )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action RETURN_E_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_E_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_E )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action RETURN_D_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_D_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_D )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action RETURN_C_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_C_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_C )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action RETURN_B_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_B_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_B )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action RETURN_A_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_A_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_A )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_INIT )
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action RETURN_INIT_Z
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Z )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_Y
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Y )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_X
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_X )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_W
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_W )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_V
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_V )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_U
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_U )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_T
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_T )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_S
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_S )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_R
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_R )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_Q
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_Q )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_P
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_P )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_O
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_O )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_N
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_N )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_M
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_M )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_L
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_L )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_K
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_K )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_J
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_J )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_I
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_I )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_H
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_H )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_G
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_G )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_F
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_F )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_E
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_E )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_D
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_D )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_C
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_C )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_B
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_B )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action RETURN_INIT_A
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDAT_A )
+			(not ( HANDAT_INIT ))
+		)
+	)
+	(:action DROP_MUG_MUG_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( IN_MUG_MUG )
+			(not ( HOLDING_MUG ))
+		)
+	)
+	(:action MOVEANDPLACE_MUG_INIT_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( FREE_INIT )
+			( HOLDING_MUG )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HANDSFREE )
+			( AT_MUG_INIT )
+			(not ( HOLDING_MUG ))
+			(not ( FREE_INIT ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_Z_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_Z ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_Y_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_Y ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_X_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_X ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_W_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_W ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_V_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_V ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_U_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_U ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_T_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_T ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_S_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_S ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_R_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_R ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_Q_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_Q ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_P_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_P ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_O_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_O ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_N_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_N ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_M_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_M ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_L_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_L ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_K_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_K ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_J_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_J ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_I_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_I ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_H_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_H ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_G_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_G ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_F_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_F ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_E_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_E ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_D_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_D ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_C_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_C ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_B_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_B ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_A_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+			(not ( HANDAT_A ))
+		)
+	)
+	(:action MOVEANDGRASP_MUG_INIT_INIT
+		:parameters ()
+		:precondition
+		(and
+			( HANDAT_INIT )
+			( AT_MUG_INIT )
+			( HANDSFREE )
+		)
+		:effect
+		(and
+			(increase (total-cost) 1)
+			( HOLDING_MUG )
+			( FREE_INIT )
+			(not ( HANDSFREE ))
+			(not ( AT_MUG_INIT ))
+		)
+	)
+
+)

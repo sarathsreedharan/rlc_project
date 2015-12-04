@@ -1,0 +1,3 @@
+moveandgrasp icecube a g
+return g init
+moveandplace icecube init c

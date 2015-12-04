@@ -1,0 +1,5 @@
+Domain=BAXTER
+Problem=SP
+Preprocessing=0.00384
+Fluents=14
+Operators=75

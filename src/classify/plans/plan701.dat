@@ -1,0 +1,3 @@
+moveandgrasp icecube a c
+return c init
+drop icecube mug init
