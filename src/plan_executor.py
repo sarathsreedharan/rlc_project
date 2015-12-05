@@ -2,16 +2,55 @@ from DmpLibrary import *
 import sys, os
 import subprocess
 import time
+import numpy as np
+from sklearn.svm import SVC
+
+import re
+import math
+
 
 # Move these to a yaml file
 marker_map = {'cup': 'ar_marker_8', 'ice_cube': 'ar_marker_10', 'init':'right_gripper', 'default':'ar_marker_9'}
-baxter_emotion_map = {"happy":"happy.png", "sad": "sad.png", "quizzical":"quizzical.png"}
+baxter_emotion_map = {"concentrating": "concentrating.png","confused": "confused.png","happy": "happy.png","neutral": "neutral.png","sad": "sad.png","sleeping": "sleeping.png","surprised-alert": "surprised-alert.png","surprised": "surprised.png"}
 indiv_dmp_map = {"MoveAndPlace": "place", "Return": "return_dmp", "Drop": "drop", "Pour": "pour" }
 src_dest_map = {"MoveAndGrasp":[2,1], "MoveAndPlace"}
 multi_dmp_actions = {"MoveAndGrasp":["vertical_grasp", "lateral_grasp"]}
+
+def classify(actionArray):
+    dmpMap = {0:'vertical', 1:'lateral'}
+    #actionMap = {0:'MoveAndGrasp'}
+    #actionArrayMap = {0:'MoveAndPlace', 1:'Drop', 2:'Pour', 3:'Return'}
+    
+    with open('data.dat') as f1:
+        X = []
+        y = []
+        for line in f1:
+            if line:
+                l = re.findall(r'\d+', line)
+                l1 = l[4]
+                l2 = l[0:4]
+                y.append(l1)
+                X.append(l2)
+    print X
+    print y
+
+    n = len(X)
+    fl = math.floor(0.7 * n)
+
+    Xtrain = X[0:int(fl)]
+    Xtest = X[int(fl):n]
+    ytrain = y[0:int(fl)]
+    ytest = y[int(fl):n]
+    classifier = SVC()
+    classifier.fit(X, y)
+    result = classifier.predict(actionArray)
+    print "Support vectors are"
+    print classifier.support_vectors_
+    return result
+
 def baxter_emote(emotion):
     current_dir = os.path.dirname(os.path.realpath(__file__))
-    image_dir = os.path.join(current_dir, '../images/')
+    image_dir = os.path.join(current_dir, 'baxter-faces/')
     display_command = ['rosrun', 'baxter_examples', 'xdisplay_image.py', '--file=`rospack find baxter_examples`']
     if emotion in baxter_emotion_map.keys():
         image_file = baxter_emotion_map[emotion]
@@ -53,7 +92,7 @@ if __name__ == "__main__":
             if action[0] != ';':
                 plan.append(action.strip())
                 ## TODO convert regions to markers
-    #baxter_emote("focus")
+    baxter_emote("focus")
     for p_index in range(len(plan)):
         action = plan[p_index]
         relevant_plan = []
@@ -68,12 +107,12 @@ if __name__ == "__main__":
         print "Executing action", dmp_name," ", marker1, " ", marker2
         status = dmp_lib.execute_dmp(dmp_name, marker1, marker2)
         time.sleep(1)
-	print "Small sleep"
+    	print "Small sleep"
         #status = True
         if not status:
-            #baxter_emote("sad")
+            baxter_emote("sad")
             print "Unexpected error during plan execution"
             exit(1)
-    #baxter_emote("happy")
+    baxter_emote("happy")
     print "Plan executed succesfully, hopefully no one was hurt too bady"
     exit(0)
