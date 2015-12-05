@@ -44,6 +44,7 @@ if __name__ == '__main__':
                 if actionName.lower() in action or plan.index(action) == len(plan)-1:
                     if plan.index(action) != 0:
                         data.append([newdata, classID])
+                        classID = 0
                         newdata = [0]*len(featureList)
                     flag = True
 
