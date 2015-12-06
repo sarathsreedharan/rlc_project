@@ -22,6 +22,7 @@
 	 :precondition (and
 	 	       (handsfree)
 		       (at ?c ?to)
+		       (handAt ?from)
 		       (handAt init)
 		       )
 	 :effect (and
