@@ -32,20 +32,20 @@ RETURN_RECORD_FILE = "record_files_test/record_file_new_return"
 # A BUNCH OF CONSTANTS
 ## TODO: Should I move it to a config file
 # A collections of grips
-LATERAL_GRIP_ORIENT = [0.695, 0.266, 0.624, -0.238] #[0.744, 0.114, 0.644, -0.133] #[0.712, 0.143, 0.674, -0.133]#[0.671, 0.281, 0.659, -0.191]
+LATERAL_GRIP_ORIENT =  [0.702, 0.184, 0.679, -0.111] #[0.695, 0.266, 0.624, -0.238] #[0.744, 0.114, 0.644, -0.133] #[0.712, 0.143, 0.674, -0.133]#[0.671, 0.281, 0.659, -0.191]
 VERTICAL_GRIP_ORIENT = [0.990, 0.139, 0.015, -0.006] #[0.923, 0.180, 0.327, -0.090] # NEEDS TO BE CHANGED
 POUR_START_GRIPPER = [0.692, 0.239, 0.667, -0.141]
 POUR_GRIP = [0.374, 0.625, 0.602, 0.328]
 PLACE_GRIP_ORIENT = [0.834, 0.544, 0.082, 0.046]
 
 # marker gripper deltas
-LATERAL_GRASP_DELTA = [-0.026, -0.1, 0.048]
-MARKER10_GRASP_DELTA = [-0.002, -0.060, 0.121]
-MARKER8_GRASP_DELTA = [-0.088, -0.051, 0.109]#[-0.002, -0.060, 0.191]
+LATERAL_GRASP_DELTA = [-0.165, -0.068, 0.048]#[0, 0 , 0] #[-0.169, -0.068, 0.057]#[-0.026, -0.1, 0.048]
+MARKER10_GRASP_DELTA = [-0.059, -0.05, 0.120]#[-0.002, -0.060, 0.121]
+MARKER8_GRASP_DELTA = [-0.056, -0.020, 0.119]#[-0.0, 0.017, 0.119]#[-0.060, -0.060, 0.119]#[-0.002, -0.060, 0.191]
 DROP_GRASP_DELTA = [-0.029, -0.087, 0.238]
 POUR_GRASP_DELTA = [0.029, -0.163, 0.228]
-PLACE_GRASP_DELTA = [-0.146, -0.128, 0.258]
-RETURN_DELTA = [0, 0, 0.030]
+PLACE_GRASP_DELTA = [-0.126, -0.128, 0.258]
+RETURN_DELTA = [0, 0, 0.070]
 
 
 class DmpLibrary(object):
@@ -101,13 +101,13 @@ class DmpLibrary(object):
         self.integrate_iter = 5       # value taken from http://wiki.ros.org/dmp
         self.seq_length = -1
         self.right_gripper = Gripper('right')
-
         # save the initial state
         try:
             self.init_pos, self.init_orient = self.tf_listener.lookupTransform('/base', '/right_gripper', rospy.Time(0))         #Plan to a different cup than demo
         except:
             time.sleep(1)
             self.init_pos, self.init_orient = self.tf_listener.lookupTransform('/base', '/right_gripper', rospy.Time(0))
+        self.right_gripper.calibrate()
         
     
 
@@ -166,6 +166,7 @@ class DmpLibrary(object):
     def grasp(self, src_marker, destination_marker, record_file, grasp_orientation, grasp_delta):
         traj = []
         print "Destination is", destination_marker
+        print "source is", src_marker
         with open(record_file) as tr_fd:
             trace_index = 0
             for line in tr_fd:
@@ -209,23 +210,28 @@ class DmpLibrary(object):
                                  0.0)         # jump_threshold
 
         if fraction < 0.8:
-            print "Not enough waypoints executed"
-            return False
+              (move_plan, fraction) = self.group.compute_cartesian_path(
+                                       waypoints,   # waypoints to follow
+                                       0.01,        # eef_step
+                                       0.0)         # jump_threshold
+              if fraction < 0.8:
+                print "Not enough waypoints executed"
+                return False
         output = StringIO.StringIO()
         move_plan.serialize(output)
 
 
         time.sleep(1)
         self.right_gripper.open([])
-        time.sleep(3)
+        time.sleep(1)
 
         self.group._g.execute(output.getvalue())
 
         #    1.c close grip
         # Baxter I command thee to close thy gripper
-        time.sleep(3)
+        time.sleep(1)
         self.right_gripper.close([])
-        time.sleep(2)
+        time.sleep(1)
         return True
 
     def vertical_grasp(self, src_marker, destination_marker):
@@ -233,9 +239,8 @@ class DmpLibrary(object):
 
             Execute the vertical_grasp
         """
-        if src_marker != "right_gripper":
-            print "For vertical grasp, the src should be right_gripper"
-            return False
+        #For vertical grasp, the src should be right_gripper
+        src_marker = "right_gripper"
         if destination_marker == "ar_marker_8":
             VERTICAL_GRASP_DELTA = MARKER8_GRASP_DELTA
         else:
@@ -248,9 +253,8 @@ class DmpLibrary(object):
 
             Execute the vertical_grasp
         """
-        if src_marker != "right_gripper":
-            print "For lateral grasp, the src should be right_gripper"
-            return False
+        # For lateral grasp, the src should be right_gripper
+        src_marker = "right_gripper"
         return self.grasp(src_marker, destination_marker, self.lateral_record_file,
                    LATERAL_GRIP_ORIENT, LATERAL_GRASP_DELTA)
 
@@ -260,34 +264,34 @@ class DmpLibrary(object):
             Both arguments are ignored here
         """
         try:
-            curr_pos, curr_orient = listener.lookupTransform('/base', '/right_gripper', rospy.Time(0))         #Plan to a different cup than demo
+            curr_pos, curr_orient = self.tf_listener.lookupTransform('/base', '/right_gripper', rospy.Time(0))         #Plan to a different cup than demo
         except:
             time.sleep(1)
-            curr_pos, curr_orient = listener.lookupTransform('/base', '/right_gripper', rospy.Time(0))
+            curr_pos, curr_orient = self.tf_listener.lookupTransform('/base', '/right_gripper', rospy.Time(0))
 
         pour_pos = geometry_msgs.msg.Pose()
         pour_pos.position.x = curr_pos[0]
         pour_pos.position.y = curr_pos[1]
         pour_pos.position.z = curr_pos[2]
     
-        pour_pos.orientation.x = pour_grip[0]
-        pour_pos.orientation.y = pour_grip[1]
-        pour_pos.orientation.z = pour_grip[2]
-        pour_pos.orientation.w = pour_grip[3]
-        group.clear_pose_targets()
-        group.set_pose_target(pour_pos)
-        group.go(wait=True)
-        time.sleep(1)
+        pour_pos.orientation.x = POUR_GRIP[0]
+        pour_pos.orientation.y = POUR_GRIP[1]
+        pour_pos.orientation.z = POUR_GRIP[2]
+        pour_pos.orientation.w = POUR_GRIP[3]
+        self.group.clear_pose_targets()
+        self.group.set_pose_target(pour_pos)
+        self.group.go(wait=True)
+        #time.sleep(1)
     
         # 7. return from pouring
-        pour_pos.orientation.x = init[3]
-        pour_pos.orientation.y = init[4]
-        pour_pos.orientation.z = init[5]
-        pour_pos.orientation.w = init[6]
-        group.clear_pose_targets()
-        group.set_pose_target(pour_pos)
-        group.go(wait=True)
-        time.sleep(1)
+        pour_pos.orientation.x = curr_orient[0]
+        pour_pos.orientation.y = curr_orient[1]
+        pour_pos.orientation.z = curr_orient[2]
+        pour_pos.orientation.w = curr_orient[3]
+        self.group.clear_pose_targets()
+        self.group.set_pose_target(pour_pos)
+        self.group.go(wait=True)
+        #time.sleep(1)
         return True
 
     def drop(self, src_marker = None, destination_marker = None):
@@ -295,9 +299,9 @@ class DmpLibrary(object):
             Execute drop
             Both arguments are ignored here
         """
-        time.sleep(1)
+        #time.sleep(1)
         self.right_gripper.open([])
-        time.sleep(3)
+        #time.sleep(3)
         return True
 
     def return_dmp(self, src_marker_obj, destination_marker = None):
@@ -340,14 +344,14 @@ class DmpLibrary(object):
             tmp_pose.orientation.y = step[4]
             tmp_pose.orientation.z = step[5]
             tmp_pose.orientation.w = step[6]
-            if step_count == 0:
-                tmp_pose.position.x = step[0] + RETURN_DELTA[0]
-                tmp_pose.position.y = step[1] + RETURN_DELTA[1]
-                tmp_pose.position.z = step[2] + RETURN_DELTA[2]
-            else:
-                tmp_pose.position.x = step[0]
-                tmp_pose.position.y = step[1]
-                tmp_pose.position.z = step[2]
+            #if step_count == 0:
+            tmp_pose.position.x = step[0] + RETURN_DELTA[0]
+            tmp_pose.position.y = step[1] + RETURN_DELTA[1]
+            tmp_pose.position.z = step[2] + RETURN_DELTA[2]
+            #else:
+            #    tmp_pose.position.x = step[0]
+            #    tmp_pose.position.y = step[1]
+            #    tmp_pose.position.z = step[2]
             step_count = step_count + 1
             waypoints.append(copy.deepcopy(tmp_pose))
 
@@ -357,8 +361,14 @@ class DmpLibrary(object):
                                  0.0)         # jump_threshold
 
         if fraction < 0.8:
-            print "Not enough waypoints executed"
-            return False
+              (move_plan, fraction) = self.group.compute_cartesian_path(
+                                       waypoints,   # waypoints to follow
+                                       0.01,        # eef_step
+                                       0.0)         # jump_threshold
+              if fraction < 0.8:
+                print "Not enough waypoints executed"
+                return False
+
         output = StringIO.StringIO()
         move_plan.serialize(output)
 
@@ -370,7 +380,7 @@ class DmpLibrary(object):
             Execute the place dmp 
         """
         traj = []
-
+        print "destination is ", destination_marker
         # we really dont care about src_marker src should always be right_gripper
         src_marker = "right_gripper"
         with open(self.vertical_record_file) as tr_fd:
@@ -416,8 +426,14 @@ class DmpLibrary(object):
                                  0.0)         # jump_threshold
 
         if fraction < 0.8:
-            print "Not enough waypoints executed"
-            return False
+              (move_plan, fraction) = self.group.compute_cartesian_path(
+                                       waypoints,   # waypoints to follow
+                                       0.01,        # eef_step
+                                       0.0)         # jump_threshold
+              if fraction < 0.8:
+                 print "Not enough waypoints executed"
+                 return False
+
         output = StringIO.StringIO()
         move_plan.serialize(output)
 
