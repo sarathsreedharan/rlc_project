@@ -1,0 +1,6 @@
+<launch>
+<arg name="problem_file" /> 
+<arg name="record_file_dir"/> 
+<node name="baxter_planner" pkg="rlc_project" type="main.py"  args="$(problem_file) $(record_file_dir)"/>
+</node>
+</launch>
