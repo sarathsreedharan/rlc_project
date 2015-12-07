@@ -96,18 +96,9 @@ def get_src_and_dest(action_list):
     src_id, dst_id =  src_dest_map[action_list[0]]
     return traslate_obj_to_markers(action_list[src_id], action_list[dst_id])
 
-if __name__ == "__main__":
+def execute_plan(plan, record_file_dir):
     rospy.init_node('baxter_planner')
-    record_file_dir = sys.argv[1]
-    plan_file = sys.argv[2]
     dmp_lib = DmpLibrary(record_file_dir)
-    plan = []
-    with open(plan_file) as p_fd:
-        for raw_action in p_fd:
-            if raw_action[0] != ';':
-                action = raw_action.strip().lower() #.split('(')[1].split(')')[0].lower()
-                plan.append(action)
-                ## TODO convert regions to markers
     baxter_emote("neutral")
     time.sleep(0.5)
     for p_index in range(len(plan)):
@@ -142,3 +133,17 @@ if __name__ == "__main__":
     time.sleep(0.5)
     baxter_emote("sleeping")
     exit(0)
+
+if __name__ == "__main__":
+    rospy.init_node('baxter_planner')
+    record_file_dir = sys.argv[1]
+    plan_file = sys.argv[2]
+    dmp_lib = DmpLibrary(record_file_dir)
+    plan = []
+    with open(plan_file) as p_fd:
+        for raw_action in p_fd:
+            if raw_action[0] != ';':
+                action = raw_action.strip().lower() #.split('(')[1].split(')')[0].lower()
+                plan.append(action)
+                ## TODO convert regions to markers
+    execute_plan(plan)
