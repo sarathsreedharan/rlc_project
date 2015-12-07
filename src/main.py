@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os, sys
+from plan_executor import *
 
 filePath    = 'demo-files/'
 domainFile  = filePath + 'domain.pddl'
@@ -31,4 +32,4 @@ if __name__ == '__main__':
 
     problemFile = problemFile + sys.argv[1]
     plan        = get_plan(domainFile, problemFile)
-    print plan 
+    execute_plan(plan)
