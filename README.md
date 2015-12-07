@@ -18,7 +18,7 @@ python trajectory_recorder.py ${record_file_name} true
 
 **Running the scenario -**
 
-Start services related to each of the above mentioned packages are started, the entire scenario can be run using the script plan_executor.py
+Start services related to each of the above mentioned packages, the entire scenario can be run using the script plan_executor.py
 
 ```
 Usage:
