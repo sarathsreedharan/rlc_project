@@ -17,6 +17,9 @@ def setFeatureList(actionName = 'MoveAndGrasp', domainFile = 'domain.pddl'):
 
 if __name__ == '__main__':
 
+    domainName   = 'cup_and_pour/'
+    #domainName   = 'blocks_world/'
+
     actionName   = 'MoveAndGrasp'
     featureList  = setFeatureList(actionName)
 

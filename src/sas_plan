@@ -1,0 +1,7 @@
+(moveandgrasp icecube init a)
+(return a init)
+(drop icecube mug init)
+(moveandgrasp cup init b)
+(return b init)
+(pour water cup mug init)
+; cost = 6 (unit cost)
