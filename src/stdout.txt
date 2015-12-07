@@ -5,15 +5,15 @@ INFO     translator time limit: None
 INFO     translator memory limit: None
 INFO     callstring: /usr/bin/python /home/yochan/Desktop/FAST-DOWNWARD/builds/release32/bin/translate/translate.py demo-files/domain.pddl demo-files/problem-2.pddl
 Parsing...
-Parsing: [0.010s CPU, 0.003s wall-clock]
+Parsing: [0.000s CPU, 0.003s wall-clock]
 Normalizing task... [0.000s CPU, 0.000s wall-clock]
 Instantiating...
 Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
 Normalizing Datalog program...
 Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
-Preparing model... [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.010s CPU, 0.002s wall-clock]
 Generated 34 rules.
-Computing model... [0.010s CPU, 0.008s wall-clock]
+Computing model... [0.000s CPU, 0.008s wall-clock]
 215 relevant atoms
 96 auxiliary atoms
 311 final queue length
@@ -23,7 +23,7 @@ Instantiating: [0.030s CPU, 0.029s wall-clock]
 Computing fact groups...
 Finding invariants...
 13 initial candidates
-Finding invariants: [0.000s CPU, 0.007s wall-clock]
+Finding invariants: [0.010s CPU, 0.006s wall-clock]
 Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
 Instantiating groups... [0.000s CPU, 0.001s wall-clock]
 Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
@@ -31,23 +31,23 @@ Choosing groups...
 5 uncovered facts
 Choosing groups: [0.000s CPU, 0.000s wall-clock]
 Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.000s CPU, 0.008s wall-clock]
+Computing fact groups: [0.010s CPU, 0.008s wall-clock]
 Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
-Building dictionary for full mutex groups... [0.010s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
 Building mutex information...
 Building mutex information: [0.000s CPU, 0.000s wall-clock]
 Translating task...
 Processing axioms...
 Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
 Processing axioms: [0.000s CPU, 0.001s wall-clock]
-Translating task: [0.000s CPU, 0.007s wall-clock]
+Translating task: [0.010s CPU, 0.007s wall-clock]
 24 effect conditions simplified
 0 implied preconditions added
 Detecting unreachable propositions...
 0 operators removed
 0 axioms removed
 8 propositions removed
-Detecting unreachable propositions: [0.010s CPU, 0.003s wall-clock]
+Detecting unreachable propositions: [0.000s CPU, 0.003s wall-clock]
 Translator variables: 10
 Translator derived variables: 0
 Translator facts: 35
@@ -59,7 +59,7 @@ Translator axioms: 0
 Translator task size: 473
 Translator peak memory: 32096 KB
 Writing output... [0.000s CPU, 0.001s wall-clock]
-Done! [0.060s CPU, 0.054s wall-clock]
+Done! [0.050s CPU, 0.053s wall-clock]
 INFO     Running preprocessor (release32).
 INFO     preprocessor input: output.sas
 INFO     preprocessor arguments: []
@@ -87,33 +87,33 @@ INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search executable: /home/yochan/Desktop/FAST-DOWNWARD/builds/release32/bin/downward
 INFO     callstring: /home/yochan/Desktop/FAST-DOWNWARD/builds/release32/bin/downward --search 'astar(lmcut())' --internal-plan-file sas_plan < output
-reading input... [t=3.2895e-05s]
+reading input... [t=3.121e-05s]
 Simplifying transitions... done!
-done reading input! [t=0.00203543s]
-packing state variables...done! [t=0.0020481s]
+done reading input! [t=0.00206433s]
+packing state variables...done! [t=0.00207807s]
 Variables: 10
 Facts: 35
 Bytes per state: 4
-Building successor generator...done! [t=0.00219708s]
-done initalizing global data [t=0.00220312s]
+Building successor generator...done! [t=0.00222825s]
+done initalizing global data [t=0.00223429s]
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
 Initializing landmark cut heuristic...
 New best heuristic value for lmcut: 4
-[g=0, 1 evaluated, 0 expanded, t=0.00257176s, 3232 KB]
-f = 4 [1 evaluated, 0 expanded, t=0.00264077s, 3232 KB]
+[g=0, 1 evaluated, 0 expanded, t=0.00270405s, 3232 KB]
+f = 4 [1 evaluated, 0 expanded, t=0.00279793s, 3232 KB]
 Initial heuristic value for lmcut: 4
-f = 5 [7 evaluated, 1 expanded, t=0.00285569s, 3232 KB]
+f = 5 [7 evaluated, 1 expanded, t=0.00311477s, 3232 KB]
 New best heuristic value for lmcut: 3
-[g=2, 9 evaluated, 2 expanded, t=0.00294731s, 3232 KB]
+[g=2, 9 evaluated, 2 expanded, t=0.00325747s, 3232 KB]
 New best heuristic value for lmcut: 2
-[g=3, 12 evaluated, 3 expanded, t=0.00305541s, 3232 KB]
-f = 6 [17 evaluated, 4 expanded, t=0.00317518s, 3232 KB]
+[g=3, 12 evaluated, 3 expanded, t=0.00342423s, 3232 KB]
+f = 6 [17 evaluated, 4 expanded, t=0.00360031s, 3232 KB]
 New best heuristic value for lmcut: 1
-[g=5, 19 evaluated, 5 expanded, t=0.0032442s, 3232 KB]
+[g=5, 19 evaluated, 5 expanded, t=0.00371373s, 3232 KB]
 New best heuristic value for lmcut: 0
-[g=6, 24 evaluated, 6 expanded, t=0.00336663s, 3232 KB]
+[g=6, 24 evaluated, 6 expanded, t=0.00387081s, 3232 KB]
 Solution found!
-Actual search time: 0.000721487s [t=0.00341364s]
+Actual search time: 0.00104547s [t=0.003925s]
 moveandgrasp icecube init a (1)
 return a init (1)
 drop icecube mug init (1)
@@ -133,8 +133,8 @@ Reopened until last jump: 0 state(s).
 Evaluated until last jump: 17 state(s).
 Generated until last jump: 20 state(s).
 Number of registered states: 24
-Search time: 0.0009855s
-Total time: 0.00341836s
+Search time: 0.00142784s
+Total time: 0.00393002s
 Solution found.
 Peak memory: 3232 KB
 INFO     Running validate.
