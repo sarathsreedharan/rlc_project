@@ -15,6 +15,7 @@ from dmp.srv import *
 from dmp.msg import *
 import tf
 import time
+import os
 import moveit_commander
 import moveit_msgs.msg
 import geometry_msgs.msg
@@ -25,9 +26,9 @@ import baxter_external_devices
 from baxter_interface import Gripper
 
 
-LATERAL_RECORD_FILE = "record_files_test/record_file_new_lat"
-VERTICAL_RECORD_FILE = "record_files_test/record_file_new_ver"
-RETURN_RECORD_FILE = "record_files_test/record_file_new_return"
+LATERAL_RECORD_FILE = "record_file_new_lat"
+VERTICAL_RECORD_FILE = "record_file_new_ver"
+RETURN_RECORD_FILE = "record_file_new_return"
 
 # A BUNCH OF CONSTANTS
 ## TODO: Should I move it to a config file
@@ -80,9 +81,9 @@ class DmpLibrary(object):
    
         self.dmp_record_file_dir = dmp_record_file_dir
         self.dmp_dims = dmp_dims
-        self.lateral_record_file = lateral_record_file
-        self.vertical_record_file = vertical_record_file
-        self.return_record_file = return_record_file    
+        self.lateral_record_file = os.path.join(self.dmp_record_file_dir, lateral_record_file)
+        self.vertical_record_file = os.path.join(self.dmp_record_file_dir, vertical_record_file)
+        self.return_record_file = os.path.join(self.dmp_record_file_dir, return_record_file)
         self.dummy = dummy
         self.tf_listener = tf.TransformListener()
         # the init velocity and goal threshold doesn't change across dmps, so just store them now

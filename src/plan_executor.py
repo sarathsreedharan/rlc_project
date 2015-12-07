@@ -16,13 +16,15 @@ indiv_dmp_map = {"moveandplace": "place", "return": "return_dmp", "drop": "drop"
 src_dest_map = {"moveandgrasp":(2,1), "moveandplace":(1,3), "drop":(1,2), "pour":(2,3), "return":(1,2)}
 multi_dmp_actions = {"moveandgrasp":["vertical_grasp", "lateral_grasp"]}
 ACTION_LIST = ['moveandplace','drop','pour','return']
+CLASSIFIER_INPUT = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'classify/data.dat')
+
 
 def classify(actionArray):
     dmpMap = {0:'vertical', 1:'lateral'}
     #actionMap = {0:'moveandgrasp'}
     #actionArrayMap = {0:'moveandplace', 1:'drop', 2:'pour', 3:'return'}
     
-    with open('classify/data.dat') as f1:
+    with open(CLASSIFIER_INPUT) as f1:
         X = []
         y = []
         for line in f1:
@@ -79,7 +81,7 @@ def convert_action_to_dmp(action, relevant_plan = []):
     else:
         # ASSUMING A SINGLE MULTI DMP ACTION
         input_vector = []
-        for i in range(len(action_list)):
+        for i in range(len(ACTION_LIST)):
            if ACTION_LIST[i] in relevant_plan:
                 input_vector.append(1)
            else:
