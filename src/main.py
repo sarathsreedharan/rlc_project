@@ -31,5 +31,6 @@ def get_plan(domainFile, problemFile):
 if __name__ == '__main__':
 
     problemFile = problemFile + sys.argv[1]
+    record_file_dir =  sys.argv[2]
     plan        = get_plan(domainFile, problemFile)
-    execute_plan(plan)
+    execute_plan(plan, record_file_dir)
