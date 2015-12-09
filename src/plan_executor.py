@@ -81,7 +81,10 @@ def convert_action_to_dmp(action, relevant_plan = []):
         input_vector = []
         for i in range(len(action_list)):
            if ACTION_LIST[i] in relevant_plan:
-                input_vector.append(1)
+                if len(input_vector) > i:
+                    input_vector[i] = input_vector[i] + 1
+                else:
+                    input_vector.append(1)
            else:
                 print ACTION_LIST[i]
                 input_vector.append(0)
